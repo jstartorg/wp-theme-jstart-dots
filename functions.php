@@ -40,4 +40,4 @@ add_action( 'tgmpa_register', function () {
 		'message'      => ''
 	);
 	tgmpa( $plugins, $config );
-})
+});
