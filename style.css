@@ -22,7 +22,7 @@ Template: astra
 }
 .wp-block-snow-monkey-blocks-section-with-bgimage {
 	video {
-		background-image: url('../images/homepage-video-snapshot.webp');
+		background-image: url('../homepage-video-snapshot.webp');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
