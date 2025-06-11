@@ -1,0 +1,259 @@
+/**
+Theme Name: jstart-dots
+Author: Jumpstart
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jstart-dots
+Template: astra
+*/
+:root, body {
+	--wp--preset--font-size--small: 0.9rem;
+	--wp--preset--font-size--normal: 1.1rem;
+	--wp--preset--font-size--medium: 1.2rem;
+			--wp--preset--font-size--large: 1.6rem;
+  --wp--preset--font-size--x-large: 1.8rem;
+	--wp--preset--font-size--huge: 2rem;
+}
+.no-header .ast-below-header-wrap {
+  display: none;
+}
+.wp-block-snow-monkey-blocks-section-with-bgimage {
+	video {
+		background-image: url(https://www.jstart.org/wp-content/uploads/Slider-Cover-Image.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	h2 {
+		text-shadow:rgba(0, 0, 0, 0.57) 2px 1px 0.91px;
+	}
+}
+.page-title-section .page-title-captions h1.entry-title,
+.header-widget-area h1,
+.header-widget-area h2 { font-family: League Spartan, sans-serif }
+.tabs-leadership {
+	ul { justify-content: center; width: 100% }
+	a[role="tab"] {
+		background: var(--jsdarkblue) !important;
+		color: white !important;
+		padding: 2px 10px !important;
+	}
+	a[role="tab"]::after {
+		  margin: 0 !important;
+		  background-color: unset !important;
+		  border: 0 !important;
+		  height: 0 !important;
+	}
+}
+.main-header-menu {
+	.button-join, .button-donate {
+		display: block;
+		font-size: 13px;
+		font-weight: 700;
+		height: 31px;
+		line-height: 13px;
+		padding-bottom: 9px;
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-top: 9px;
+		margin: 10px 0 10px 10px;
+		a, a:hover { color: white !important; }
+	}
+	.button-join { background-color: var(--jsdarkblue); }
+	.button-donate { background-color: var(--jsred); }
+	a:hover { color: var(--jsred) !important }
+	.ast-header-navigation-arrow { display: none }
+	.sub-menu {
+		border-top: 2px solid var(--jsred) !important;
+		background: #f4f5f5 !important;
+		li:hover {
+			text-indent: 12px;
+			background: white !important;
+			a { color: black !important; }
+		}
+	}
+}
+
+.old-callout-box {
+    background-color: white;
+    position: relative;
+}
+.old-callout-box::after {
+    display: block;
+    content: '\0020';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ccdfe0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-2deg) scale(1.01);
+    transform-origin: center center;
+    z-index: -1;
+}
+.state-list {
+	:where(body .is-layout-flex) { gap: 12px }
+	.wp-block-button {
+		flex-grow: 1;
+		a {
+			background: var(--jsdarkblue);
+			text-align: center;
+			width: 100%;
+			align-content: center;
+			height: 3rem;
+		}
+		a:hover, a:focus {
+			color: white;
+			background-color: var(--jsblue);
+			border-color: var(--jsblue);
+		}
+	}
+}
+.hero-statistics .wp-block-cover-is-layout-flow {
+	width: 33% !important
+}
+.pods-list-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3rem;
+}
+.plethoraplugins-tabs-container--horizontal.plethoraplugins-theme__minimal.plethoraplugins-theme__basic .pds-tab__tab-list-underline, .plethoraplugins-tabs-container--horizontal.plethoraplugins-theme__minimal.plethoraplugins-theme__basic .plethoraplugins-tabs {
+	border: 0 !important;
+}
+.zindex-negative, .zindex-negative .smb-hero-header__figure { z-index: -1 }
+.ast-below-header-bar {
+	position: relative;
+	overflow: clip;
+}
+.ast-below-header-bar::before {
+	background: url(https://www.jstart.org/wp-content/uploads/Doodle_curl_bold.svg) 0 0 no-repeat;
+	content: "";
+	position: absolute;
+	width: 250px;
+	height: 450px;
+	left: -150px;
+	top: -1.1rem;
+	filter: brightness(0) invert(75%) sepia(17%) saturate(6628%) hue-rotate(177deg) brightness(96%) contrast(98%);
+	transform: rotate(46deg);
+}
+.site-below-header-wrap {
+	z-index: 2;
+	position: relative;
+	h1 { text-align: center; padding: 0.2rem 1rem; }
+}
+.ast-below-header-bar::after {
+	background: url(https://www.jstart.org/wp-content/uploads/Doodle_asterisk.svg) 0 0 no-repeat;
+	content: "";
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	right: 0;
+	top: 1.5rem;
+	filter: saturate(0) brightness(6);
+}
+.youtube_channel.responsive {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 20px !important;
+}
+.site_news {
+	margin: 0;
+	.listing-item {
+		clear: both;
+		padding: 1rem 1rem 0 0;
+		list-style: none;
+	}
+	.excerpt-more {
+		display: block;
+		text-align: right;
+		color: var(--jsred);
+		margin-top: 1rem;
+	}
+	.image {
+		float: left;
+		margin-right: 1rem;
+		width: 6rem;
+	}
+}
+
+.borderless {
+	.smb-hero-header__figure,
+	.spider,
+	.smb-section-with-bgimage__bgimage {
+		margin: 0 !important;
+		max-width: 100% !important;
+	}
+}
+/* div[data-section="title_tagline"] { margin-bottom:-40px !important } */
+.smb-hero-header__figure video {
+	background-image: url(https://www.jstart.org/wp-content/uploads/Slider-Cover-Image.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important }
+.ast-builder-menu-1 {
+	.menu-text {
+		font-family: League Spartan, sans-serif !important;
+		font-size: 16px;
+	}
+	.sub-menu .menu-link { text-transform: none !important; }
+}
+.site-branding { padding: 0 !important }
+.site-branding.ast-site-identity {
+	position: absolute;
+	z-index: 99;
+	top: 3.25rem;
+}
+#ast-mobile-header {
+	.site-branding.ast-site-identity {
+		top: 0;
+		img {
+			height: 36px;
+			width: auto;
+			margin-top: 6px;
+		}
+	}
+}
+.slider-homepage {
+	.wp-block-themeisle-blocks-tabs__header_item.active, .wp-block-themeisle-blocks-tabs__header_item:hover {
+		background: unset !important;
+		div::before { color: white; }
+	}
+	.wp-block-themeisle-blocks-tabs__header_item {
+		display: flex !important;
+		font-weight: bolder;
+		margin-bottom: 1rem !important;
+		div::before {
+			font-family: "League Spartan";
+			padding-right: 1.3rem;
+			position: relative;
+			padding: 1.4rem;
+			background: url(https://www.jstart.org/wp-content/uploads/dot.png) no-repeat center center;
+		}
+	}
+	.wp-block-themeisle-blocks-tabs__header_item:nth-child(1) div::before { content: "1"; }
+	.wp-block-themeisle-blocks-tabs__header_item:nth-child(2) div::before { content: "2"; }
+	.wp-block-themeisle-blocks-tabs__header_item:nth-child(3) div::before { content: "3"; }
+	.wp-block-themeisle-blocks-tabs__header_item:nth-child(4) div::before { content: "4"; }
+	/* .wp-block-themeisle-blocks-tabs__header_item::before {
+		content: "";
+		padding: 1.3rem 1.4rem;
+		background: url(https://next.jstart.org/wp-content/uploads/dot.png) no-repeat left center;
+	} */
+	.wp-block-themeisle-blocks-tabs__header_item.active div::before,
+	.wp-block-themeisle-blocks-tabs__header_item:hover div::before {
+		filter: hue-rotate(190deg) saturate(25) brightness(0.87);
+	}
+}
+.wp-block-latest-posts__list {
+	.wp-block-latest-posts__post-title { font-weight: bolder; font-size:1.2rem; }
+	.wp-block-latest-posts__featured-image img {
+		width:175px;
+	}
+}
+.images-16x9, .images-16x9 img { aspect-ratio: 16/9; object-fit: cover; }
