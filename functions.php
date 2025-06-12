@@ -13,6 +13,25 @@ function child_enqueue_resources() {
 	// wp_enqueue_script( 'jstart-dots-theme-js', get_stylesheet_directory_uri() . '/lib.js', array(), CHILD_THEME_JSTART_DOTS_VERSION, 'true');
 }
 add_action( 'wp_enqueue_scripts', 'child_enqueue_resources', 15 );
+// Adding sidebars for page templates
+add_action( 'widgets_init', function () {
+        register_sidebar( array(
+                'name'          => __( 'Site Management Binder Sidebar', 'jstart_dots' ),
+                'id'            => 'sidebar_smb',
+                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</aside>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+        ) );
+        register_sidebar( array(
+                'name'          => __( 'Knowledge Base Sidebar', 'jstart_dots' ),
+                'id'            => 'sidebar_kb',
+                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</aside>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+        ) );
+});
 
 /** Include the TGM_Plugin_Activation class. */
 require_once get_stylesheet_directory() . '/class-tgm-plugin-activation.php';
