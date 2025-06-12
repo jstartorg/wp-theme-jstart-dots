@@ -3,7 +3,7 @@
  * jstart-dots Theme functions and definitions
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  * @package jstart-dots
- * @since 1.0.0
+ * @since 1.4.0
  */
 /** Define Constants */
 define( 'CHILD_THEME_JSTART_DOTS_VERSION', '1.0.0' );
@@ -26,7 +26,6 @@ add_action( 'tgmpa_register', function () {
 		array('name' => 'Duplicate Page', 'slug' => 'duplicate-page', 'required' => false),
 		array('name' => 'Enable Media Replace', 'slug' => 'enable-media-replace', 'required' => false),
 		array('name' => 'Media Library Assistant', 'slug' => 'media-library-assistant', 'required' => false),
-		array('name' => 'MLA Insert Fixit', 'slug' => 'mla-insert-fixit', 'required' => false),
 		array('name' => 'Simple History', 'slug' => 'simple-history', 'required' => false),
 		array('name' => 'Spectra for Astra', 'slug' => 'ultimate-addons-for-gutenberg', 'required' => false),
 		array('name' => 'Wordfence', 'slug' => 'wordfence', 'required' => false),
@@ -35,16 +34,20 @@ add_action( 'tgmpa_register', function () {
 		array('name' => 'WP SAML Authentication', 'slug' => 'wp-saml-auth', 'required' => false),
 	);
 	$config = array(
-		'id'           => 'jstart-dots',
+		'id'           => 'wp-theme-jstart-dots',
 		'default_path' => '',
 		'menu'         => 'tgmpa-install-plugins',
-		'parent_slug'  => 'themes.php',
+		'parent_slug'  => 'plugins.php',
 		'capability'   => 'edit_theme_options',
 		'has_notices'  => true,
 		'dismissable'  => true,
 		'dismiss_msg'  => '',
 		'is_automatic' => false,
-		'message'      => ''
+		'message'      => '',
+		'strings'      => array(
+			'page_title' => __( 'Install Suggested Plugins', 'wp-theme-jstart-dots' ),
+			'menu_title' => __( 'Suggested Plugins', 'wp-theme-jstart-dots' ),
+		),
 	);
 	tgmpa( $plugins, $config );
 });
