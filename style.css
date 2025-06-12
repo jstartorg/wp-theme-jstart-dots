@@ -209,6 +209,7 @@ aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important 
 	z-index: 99;
 	top: 3.25rem;
 }
+.ast-header-break-point .site-branding.ast-site-identity { width: auto }
 #ast-mobile-header {
 	.site-branding.ast-site-identity {
 		top: 0;
