@@ -12,6 +12,7 @@ get_header(); ?>
 	#kb-content-wrapper {
 		display:flex;
 		column-gap: 1rem;
+		margin: 3vh 7vw;
 		:first-child {
 			flex:1;
 		}
@@ -20,7 +21,6 @@ get_header(); ?>
 		}
 	}
 </style>
-<!--     <div class="js_page_title"><?php the_title(); ?></div> -->
 	<div id="kb-content-wrapper">
 		<div class="ast-left-sidebar">
 			<?php dynamic_sidebar('sidebar_kb'); ?>
