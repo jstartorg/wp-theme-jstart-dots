@@ -13,6 +13,7 @@ get_header(); ?>
 		display:flex;
 		column-gap: 1rem;
 		margin: 3vh 7vw;
+		width: 100%;
 		:first-child {
 			flex:1;
 		}
