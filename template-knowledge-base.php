@@ -26,9 +26,13 @@ get_header(); ?>
 			<?php dynamic_sidebar('sidebar_kb'); ?>
 		</div>
 		<div <?php astra_primary_class(); ?>>
-			<?php astra_primary_content_top(); ?>
-			<?php astra_content_page_loop(); ?>
-			<?php astra_primary_content_bottom(); ?>
+			<?php
+				if($current_user->has_cap('edit_posts'))
+					'<div class="edit_link">'.edit_post_link(__('{Edit}')).'</div>';
+				astra_primary_content_top();
+				astra_content_page_loop();
+				astra_primary_content_bottom();
+			?>
 		</div>
 	</div>
 <?php get_footer(); ?>
