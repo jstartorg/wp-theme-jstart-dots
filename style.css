@@ -285,4 +285,4 @@ aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important 
 	}
 }
 
-.edit_link { float:right; }
+.page-template-template-knowledge-base .post-edit-link, .page-template-template-smb .post-edit-link { float:right; }
