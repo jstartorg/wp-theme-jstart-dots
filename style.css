@@ -258,3 +258,31 @@ aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important 
 	}
 }
 .images-16x9, .images-16x9 img { aspect-ratio: 16/9; object-fit: cover; }
+
+/* Custom content styles */
+#kb-content-wrapper {
+	display:flex;
+	column-gap: 1rem;
+	margin: 3vh 7vw;
+	width: 100%;
+	:first-child {
+		flex:1;
+	}
+	:nth-child(2) {
+		flex:3;
+	}
+}
+#smb-content-wrapper {
+	display:flex;
+	column-gap: 1rem;
+	margin: 3vh 7vw;
+	width: 100%;
+	:first-child {
+		flex:1;
+	}
+	:nth-child(2) {
+		flex:3;
+	}
+}
+
+.edit_link { float:right; }
