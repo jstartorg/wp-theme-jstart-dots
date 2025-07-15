@@ -285,4 +285,17 @@ aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important 
 	}
 }
 
-.page-template-template-knowledge-base .post-edit-link, .page-template-template-smb .post-edit-link { float:right; }
+.page-template-template-knowledge-base, .page-template-template-smb {
+	.post-edit-link { float:right; }
+	.ast-left-sidebar {
+		a { text-decoration: underline; text-decoration-thickness: 1px }
+		details summary::marker {
+			color:var(--ast-global-color-0);
+			content: "🞦 ";
+			cursor: pointer;
+		}
+		details[open] summary::marker {
+			content:" ■ "
+		}
+}
+}
