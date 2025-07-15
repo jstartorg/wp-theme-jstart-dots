@@ -289,12 +289,12 @@ aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important 
 	.post-edit-link { float:right; }
 	.ast-left-sidebar {
 		a { text-decoration: underline; text-decoration-thickness: 1px }
-		details summary::marker {
+		details>summary::marker {
 			color:var(--ast-global-color-0);
 			content: "🞦 ";
 			cursor: pointer;
 		}
-		details[open] summary::marker {
+		details[open]>summary::marker {
 			content:" ■ "
 		}
 }
