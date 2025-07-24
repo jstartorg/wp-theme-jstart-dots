@@ -297,5 +297,16 @@ aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important 
 		details[open]>summary::marker {
 			content:" ■ "
 		}
+	}
 }
+
+/* ------------  Printer settings ----------- */
+@media print {
+	.uagb-tabs__wrap .uagb-tabs__body-container + .uagb-tabs__body-container {
+		display: grid;
+		border-top:3px solid lightgrey;
+		padding-top:1rem;
+		margin-top: 1rem;
+	}
+	.ast-left-sidebar, .uagb-tabs__panel, .site-footer, .is-layout-flow.wp-block-group-is-layout-flow:has(.title.conf-macro-render) {display:none !important }
 }
