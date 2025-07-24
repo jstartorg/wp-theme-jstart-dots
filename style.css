@@ -302,6 +302,12 @@ aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important 
 
 /* ------------  Printer settings ----------- */
 @media print {
+	* {
+		padding-left:0 !important;
+		padding-right:0!important;
+		margin-left:0!important;
+		margin-right:0!important;
+	}
 	.uagb-tabs__wrap .uagb-tabs__body-container + .uagb-tabs__body-container {
 		display: grid;
 		border-top:3px solid lightgrey;
