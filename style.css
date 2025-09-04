@@ -299,26 +299,3 @@ aside[data-section="sidebar-widgets-header-widget-3"] { display:none !important 
 		}
 	}
 }
-
-/* ------------  Printer settings ----------- */
-@media print {
-	* {
-		padding-left:0 !important;
-		padding-right:0!important;
-		margin-left:0!important;
-		margin-right:0!important;
-	}
-	.uagb-tabs__wrap .uagb-tabs__body-container + .uagb-tabs__body-container, .wp-block-themeisle-blocks-tabs-item + .wp-block-themeisle-blocks-tabs-item {
-		display: grid;
-		border-top:3px solid lightgrey;
-		padding-top:1rem;
-		margin-top: 1rem;
-	}
-	.ast-left-sidebar, .uagb-tabs__panel, .site-footer, .is-layout-flow.wp-block-group-is-layout-flow:has(.title.conf-macro-render) {display:none !important }
-	.wp-block-themeisle-blocks-tabs-item {
-		.wp-block-themeisle-blocks-tabs-item__header,
-		.wp-block-themeisle-blocks-tabs-item__content {display:block !important}
-		.wp-block-themeisle-blocks-tabs-item__header { font-size: 180%; font-weight: bold; text-transform: uppercase;}
-		h3 { font-size: 140% }
-	}
-}
