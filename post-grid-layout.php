@@ -58,11 +58,16 @@ usort( $book_terms, function( $a, $b ) {
 });
  $discription = "";
 if ( !empty($book_terms) && !is_wp_error($book_terms) ) :
+
+    $count = 0;
+    $group = 1;
+
+
     foreach ( $book_terms as $book_term ) : 
     
-      
+      $class = 'group-' . $group;
     ?>
-    <div>
+    <div class="<?php echo esc_attr( $class ); ?>">
         <!-- Category Title -->
         <div class="post-header">
             <div class="week-detail"><span><?php echo esc_html( $book_term->name ); ?></span></div>
@@ -91,6 +96,7 @@ if ( !empty($book_terms) && !is_wp_error($book_terms) ) :
                 $illustrator_name= get_field('illustrator_name');
                 $record_year     = get_field('record_year');
                 $house_name      = get_field('house_name');
+				$long_description = get_field('long_description');
         ?>
  <?php
 $coming_soon = get_field('coming_soon'); 
@@ -162,7 +168,15 @@ $coming_soon = get_field('coming_soon');
 
         <?php endwhile; wp_reset_postdata(); endif; ?>
 </div>
-    <?php endforeach;
+    <?php 
+$count++;
+
+        // Every 4 items, move to the next group
+        if ( $count % 4 == 0 ) {
+            $group++;
+        }
+
+endforeach;
 endif;
 ?>
 
@@ -217,11 +231,11 @@ endif;
 
                   <div class="single-footer">
                      <div class="multi-button-group">
-                                    <a class="popup-first-btn" href=""></a>
-                                    <a class="popup-second-btn" href=""></a>
+                                    <a class="popup-first-btn" href="" target="_blank"></a>
+                                    <a class="popup-second-btn" href="" target="_blank"></a>
                                 </div>
                                 <div class="single-button-group">
-                                    <a href="" class="group-icon popup-third-btn">
+                                    <a href="" class="group-icon popup-third-btn" target="_blank">
                                         <img class="popup-third-logo" src="" alt="">
                                         <span class="popup-third-text"></span>
                                     </a>
@@ -381,21 +395,21 @@ if (Array.isArray(data.related_posts_data) && data.related_posts_data.length) {
   let html = "";
   data.related_posts_data.forEach(function(post) {
     html += `
+        <a href="${post.link}">
       <div class="articles-post">
-        <div class="post-featured-img">
-          <a href="${post.link}">
+        <div class="post-featured-img">  
             <img src="${post.image}" alt="${post.title}">
-          </a>
         </div>
         <div class="latest-featured-content">
           <div class="short-info">
-            <p>${post.content}</p>
+            <p>${post.title}</p>
           </div>
           <div class="latest-post-date">
             <span>${post.date}</span>
           </div>
         </div>
       </div>
+        </a>
     `;
   });
   $("#related_post_data").html(html);

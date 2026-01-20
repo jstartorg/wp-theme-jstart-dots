@@ -122,26 +122,27 @@ if (!empty($matching_term_ids)) {
         'posts_per_page' => -1,
         'post_status'    => 'publish',
         'category__in'   => $matching_term_ids,
-        'orderby'        => 'modified',
+        'orderby'        => 'date',
         'order'          => 'DESC',
     ]);
     if($query->have_posts()):
         while($query->have_posts()): $query->the_post(); ?>
             <div class="articles-post blog-post">
+            <a href="<?php echo esc_url(get_permalink()); ?>">
                 <div class="post-featured-img">
-                    <a href="<?php echo esc_url(get_permalink()); ?>">
+                   
                         <?php if(has_post_thumbnail()) { the_post_thumbnail('full',['alt'=>get_the_title()]); }
                         else { ?>
                             <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/images/slider-image-2.png'); ?>" alt="">
                         <?php } ?>
-                    </a>
+                    
                 </div>
                 <div class="latest-featured-content">
                     <div class="short-info">
-                        <p><?php echo wp_kses_post(wp_trim_words(get_the_content(),15,'...')); ?></p>
+                        <p><?php echo get_the_title();?></p>
                     </div>
                     <div class="latest-post-date">
-                        <span class="blog-publish-date"><?php echo esc_html( get_the_modified_date('F j, Y') ); ?></span>
+                        <span class="blog-publish-date"><?php echo esc_html( get_the_date('F j, Y') ); ?></span>
                         <span class="blog-category">
                             <?php
 $category = get_the_category();
@@ -157,7 +158,9 @@ if (!empty($category)) {
                         </span>
                     </div>
                 </div>
-            </div>
+  </a>
+             </div>
+  
         <?php endwhile; wp_reset_postdata();
     endif;
     } ?>
