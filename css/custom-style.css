@@ -96,10 +96,6 @@
         .category-fields ul.subcategory-fields li { position:relative; margin-bottom:0; }
         .category-fields ul.subcategory-fields li::before { content: '-'; position: absolute; left: -18px; top: 0px; height: 100%; }
 
-
-
-
-
         @media (max-width:1200px) and (min-width:1025px) {
             .lg-column-template-4 { grid-template-columns: 1fr 1fr 1fr 1fr;}
             .lg-column-template-3 { grid-template-columns: repeat(3, 1fr); }

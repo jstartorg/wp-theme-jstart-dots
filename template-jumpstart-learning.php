@@ -1,4 +1,4 @@
-<?php /* Template Name: Site Management Binder */
+<?php /* Template Name: Jumpstart Learning Page */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -8,9 +8,9 @@ get_header(); ?>
         const currentEmail = '<?= wp_get_current_user()->user_email; ?>'
         const currentUsername = '<?= wp_get_current_user()->user_login; ?>'
 </script>
-	<div id="smb-content-wrapper">
+	<div id="jumpstart-learning-content-wrapper" class="template-content-wrapper">
 		<div class="ast-left-sidebar">
-			<?php dynamic_sidebar('sidebar_smb'); ?>
+			<?php dynamic_sidebar('sidebar_jumpstart_learning'); ?>
 		</div>
 		<div <?php astra_primary_class(); ?>>
 			<?php

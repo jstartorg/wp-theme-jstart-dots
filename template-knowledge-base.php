@@ -8,7 +8,7 @@ get_header(); ?>
         const currentEmail = '<?= wp_get_current_user()->user_email; ?>'
         const currentUsername = '<?= wp_get_current_user()->user_login; ?>'
 </script>
-	<div id="kb-content-wrapper">
+	<div id="kb-content-wrapper" class="template-content-wrapper">
 		<div class="ast-left-sidebar">
 			<?php dynamic_sidebar('sidebar_kb'); ?>
 		</div>

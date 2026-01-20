@@ -3,10 +3,10 @@
  * jstart-dots Theme functions and definitions
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  * @package jstart-dots
- * @since 1.4.0
+ * @since 1.7.1
  */
 /** Define Constants */
-define( 'CHILD_THEME_JSTART_DOTS_VERSION', '1.6.0' );
+define( 'CHILD_THEME_JSTART_DOTS_VERSION', '1.7.1' );
 /** Enqueue styles */
 function child_enqueue_resources() {
 	wp_enqueue_style( 'jstart-dots-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_JSTART_DOTS_VERSION, 'all' );
@@ -26,6 +26,14 @@ add_action( 'widgets_init', function () {
         register_sidebar( array(
                 'name'          => __( 'Knowledge Base Sidebar', 'jstart_dots' ),
                 'id'            => 'sidebar_kb',
+                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</aside>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+        ) );
+        register_sidebar( array(
+                'name'          => __( 'Jumpstart Learning Sidebar', 'jstart_dots' ),
+                'id'            => 'sidebar_jumpstart_learning',
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
                 'after_widget'  => '</aside>',
                 'before_title'  => '<h3 class="widget-title">',
